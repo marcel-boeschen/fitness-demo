@@ -1,4 +1,4 @@
-# Fitness Landing Page
+# Fitness DEMO
 
 Modern e-commerce landing page for a fitness/supplement brand.
 
