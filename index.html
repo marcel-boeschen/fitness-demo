@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitFuel - E-Commerce</title>
+<title>FitFuel - E-Commerce Landing Page</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+/* BASIC STYLES */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #fffaf7;
+  background-color: #e0f7f4; /* Soft Gray-Teal Background */
   color: #333;
 }
 
@@ -21,9 +23,10 @@ body {
   margin: auto;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 60px 0;
@@ -31,30 +34,35 @@ body {
 
 .hero-text h1 {
   font-size: 3rem;
+  color: #1abc9c; /* Teal Headline */
 }
 
 .hero-text p {
   margin: 20px 0;
+  font-size: 1.2rem;
 }
 
 .btn {
   padding: 12px 24px;
-  background: #ffb6b9;
+  background-color: #16a085; /* Darker Teal Button */
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  color: white;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #ff8fa3;
+  background-color: #138d75;
 }
 
 .hero img {
   width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
 }
 
-/* PRODUCTS */
+/* PRODUCTS SECTION */
 .products {
   padding: 60px 0;
   text-align: center;
@@ -67,7 +75,7 @@ body {
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   border-radius: 20px;
   transition: 0.3s;
@@ -82,9 +90,9 @@ body {
   border-radius: 10px;
 }
 
-/* BENEFITS */
+/* BENEFITS SECTION */
 .benefits {
-  background: #fff0f3;
+  background: #b2f1e0; /* Light green-teal background */
   padding: 50px 0;
   text-align: center;
 }
@@ -93,6 +101,8 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  font-size: 1.2rem;
+  gap: 20px;
 }
 
 /* TESTIMONIALS */
@@ -104,69 +114,82 @@ body {
 .testimonial {
   max-width: 400px;
   margin: 20px auto;
+  font-style: italic;
 }
 
-/* CTA */
+/* CTA SECTION */
 .cta {
-  background: linear-gradient(to right, #ffd6d6, #fff);
+  background: linear-gradient(to right, #16a085, #1abc9c);
   padding: 50px;
   text-align: center;
+  color: white;
+  border-radius: 20px;
 }
 
 /* FOOTER */
 footer {
-  background: #333;
+  background-color: #138d75;
   color: white;
   padding: 30px;
   text-align: center;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero img {
+    margin-top: 30px;
+  }
+}
 </style>
 </head>
-
 <body>
 
+<!-- HERO -->
 <div class="container hero">
   <div class="hero-text">
-    <h1>Achieve Your Best Shape</h1>
-    <p>Premium supplements for your healthiest lifestyle.</p>
+    <h1>Fuel Your Fitness Journey</h1>
+    <p>Premium supplements to support a healthy lifestyle and peak performance.</p>
     <button class="btn">Shop Now</button>
   </div>
-  <img src="https://via.placeholder.com/400" alt="product">
+  <img src="https://via.placeholder.com/400" alt="Product Mockup">
 </div>
 
+<!-- PRODUCTS -->
 <section class="products container">
   <h2>Featured Products</h2>
   <div class="product-grid">
-    
     <div class="card">
-      <img src="https://via.placeholder.com/250">
+      <img src="https://via.placeholder.com/250" alt="Protein Powder">
       <h3>Protein Powder</h3>
       <p>High protein, low sugar</p>
     </div>
-
     <div class="card">
-      <img src="https://via.placeholder.com/250">
+      <img src="https://via.placeholder.com/250" alt="Energy Drink">
       <h3>Energy Drink</h3>
       <p>Boost your performance</p>
     </div>
-
     <div class="card">
-      <img src="https://via.placeholder.com/250">
+      <img src="https://via.placeholder.com/250" alt="Vitamins">
       <h3>Vitamins</h3>
       <p>Daily essential nutrients</p>
     </div>
-
   </div>
 </section>
 
+<!-- BENEFITS -->
 <section class="benefits">
   <div class="benefit-items">
     <div>💪 High Protein</div>
-    <div>🚫 Sugar Free</div>
-    <div>🇩🇪 Made in Germany</div>
+    <div>🚫 Sugar-Free</div>
+    <div>🌿 Made in Germany</div>
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section class="testimonials container">
   <h2>What Our Customers Say</h2>
   <div class="testimonial">
@@ -179,11 +202,13 @@ footer {
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Start Your Transformation Today</h2>
   <button class="btn">Shop Now</button>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 FitFuel. All rights reserved.</p>
 </footer>
