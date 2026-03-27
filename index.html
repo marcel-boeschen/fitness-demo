@@ -1,205 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PeakFuel • Premium Fitness Nutrition</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIT TEMPLATE – Premium Nutrition & Supplements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
 
-<style>
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #fff;
-    color: #222;
-  }
-  a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  /* HERO */
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px;
-    background: #fefefe;
-  }
-  .hero-text {
-    max-width: 550px;
-  }
-  .hero-text h1 {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  .hero-text p {
-    margin: 20px 0;
-    font-size: 1.2rem;
-  }
-  .btn-primary {
-    display: inline-block;
-    padding: 14px 32px;
-    background: #e74c3c;
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-  }
-  .btn-primary:hover {
-    background: #c0392b;
-  }
-  .hero img {
-    max-width: 450px;
-    width: 100%;
-  }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  /* PRODUCT GRID */
-  .products {
-    padding: 60px;
-    text-align: center;
-  }
-  .products h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-  .grid {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-  .card {
-    border: 1px solid #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-  }
-  .card img {
-    width: 100%;
-  }
-  .card-body {
-    padding: 16px;
-  }
-  .card-body h3 {
-    margin: 0;
-    font-size: 1.3rem;
-  }
-  .card-body p {
-    margin: 8px 0;
-    font-size: 0.95rem;
-    color: #555;
-  }
+    /* Header */
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-  /* BENEFITS */
-  .benefits {
-    background: #fafafa;
-    padding: 50px;
-    text-align: center;
-  }
-  .benefits .item {
-    margin: 12px;
-    font-size: 1.1rem;
-  }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-  /* TESTIMONIALS */
-  .testimonials {
-    padding: 60px;
-    background: #fff;
-    text-align: center;
-  }
-  .testimonial {
-    max-width: 480px;
-    margin: 0 auto 30px auto;
-    font-size: 1rem;
-    font-style: italic;
-  }
+    nav a {
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-  /* CTA BANNER */
-  .cta-banner {
-    background: #e74c3c;
-    padding: 60px;
-    text-align: center;
-    color: #fff;
-  }
+    nav a:hover {
+      color: #facc15;
+    }
 
-  /* FOOTER */
-  footer {
-    background: #222;
-    color: #ddd;
-    padding: 30px;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-</style>
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 10%;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+    }
 
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      background: #facc15;
+      color: #0f172a;
+      padding: 15px 30px;
+      font-weight: 700;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .hero .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      padding: 80px 10%;
+      background: #f8fafc;
+    }
+
+    .feature {
+      text-align: center;
+    }
+
+    .feature img {
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 80px 10%;
+    }
+
+    .products h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 15px 0;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      padding: 0 10px 15px;
+      color: #6b7280;
+    }
+
+    .product .btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      background: #0f172a;
+      color: #facc15;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+
+    .product .btn:hover {
+      background: #1e293b;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 40px 10%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #facc15;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Optimize Your Performance</h1>
-    <p>Premium nutrition for athletes & active lifestyles. Fuel your potential with quality supplements.</p>
-    <a href="#" class="btn-primary">Shop Now</a>
-  </div>
-  <img src="https://via.placeholder.com/450" alt="Product Hero">
-</section>
+  <!-- Header -->
+  <header>
+    <h1>FIT TEMPLATE</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#products">Produkte</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
 
-<!-- PRODUCTS -->
-<section class="products">
-  <h2>Featured Products</h2>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Deine Premium Nutrition Marke</h2>
+    <p>Hochwertige Supplements für Fitness, Energie und Gesundheit – direkt zu dir nach Hause.</p>
+    <a href="#products" class="btn">Jetzt entdecken</a>
+  </section>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="">
-      <div class="card-body">
-        <h3>Peak Protein</h3>
-        <p>High protein blend for muscle support.</p>
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1589927986089-35812388d1e3?auto=format&fit=crop&w=800&q=80" alt="Qualität">
+      <h3>Premium Qualität</h3>
+      <p>Unsere Produkte werden aus hochwertigen Zutaten hergestellt und unter strengen Qualitätsstandards geprüft.</p>
+    </div>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1599058917215-3e8a5c1c7fa6?auto=format&fit=crop&w=800&q=80" alt="Innovation">
+      <h3>Innovative Formeln</h3>
+      <p>Wir kombinieren neueste Forschung mit natürlichen Inhaltsstoffen für maximale Wirkung.</p>
+    </div>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1615484470073-77b7c59f89c3?auto=format&fit=crop&w=800&q=80" alt="Support">
+      <h3>Exzellenter Support</h3>
+      <p>Unser Team steht dir jederzeit zur Verfügung, um Fragen zu beantworten und Beratung zu bieten.</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Unsere Produkte</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=400&q=80" alt="Protein Pulver">
+        <h3>Protein Pulver</h3>
+        <p>Hochwertiges Whey Protein für Muskelaufbau und Regeneration.</p>
+        <a href="#" class="btn">Jetzt kaufen</a>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1599058917215-3e8a5c1c7fa6?auto=format&fit=crop&w=400&q=80" alt="Vitamin Komplex">
+        <h3>Vitamin Komplex</h3>
+        <p>Essentielle Vitamine für Energie und Wohlbefinden im Alltag.</p>
+        <a href="#" class="btn">Jetzt kaufen</a>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1615484470073-77b7c59f89c3?auto=format&fit=crop&w=400&q=80" alt="Energie Booster">
+        <h3>Energie Booster</h3>
+        <p>Natürlicher Energie- und Fokus-Booster für Sport und Arbeit.</p>
+        <a href="#" class="btn">Jetzt kaufen</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="">
-      <div class="card-body">
-        <h3>Energy Boost</h3>
-        <p>Pre‑workout for maximum performance.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="">
-      <div class="card-body">
-        <h3>Daily Essentials</h3>
-        <p>Vitamins & micronutrients for everyday health.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- BENEFITS -->
-<section class="benefits">
-  <div class="item">💪 High Quality Ingredients</div>
-  <div class="item">✨ Lab‑Tested & Safe</div>
-  <div class="item">🚚 Fast Shipping</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <h2>Customer Reviews</h2>
-  <div class="testimonial">⭐⭐⭐⭐⭐ "Love the energy boost!"</div>
-  <div class="testimonial">⭐⭐⭐⭐⭐ "Fantastic quality & taste!"</div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <h2>Start Your Journey Today</h2>
-  <a href="#" class="btn-primary">Get Started</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 PeakFuel Nutrition • All Rights Reserved
-</footer>
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 FIT TEMPLATE. Alle Rechte vorbehalten.</p>
+    <p>
+      <a href="#">Impressum</a> | 
+      <a href="#">Datenschutz</a> | 
+      <a href="#">Kontakt</a>
+    </p>
+  </footer>
 
 </body>
 </html>
